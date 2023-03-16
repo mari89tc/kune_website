@@ -21,16 +21,16 @@ import Main from "../layouts/Main.astro";
     </section>
     <section class="grid_1-1-1">
       <div>
-        <img src="forside1.webp" alt="" />
-        <h4></h4>
+        <img src="forside1.webp" alt="picture from workshop" />
+        <h4>Do you want to be volunteer at KUNE Festival?</h4>
       </div>
       <div>
-        <img src="" alt="" />
-        <h4></h4>
+        <img src="forside3.webp" alt="picture from festival" />
+        <h4>Who’s playing at KUNE Festival 2023?</h4>
       </div>
       <div>
-        <img src="" alt="" />
-        <h4></h4>
+        <img src="forside2.webp" alt="picture of art" />
+        <h4>Read more about KUNE Festival here!</h4>
       </div>
     </section>
     <section>
@@ -49,10 +49,33 @@ import Main from "../layouts/Main.astro";
     .grid_1-1 {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      gap: 20px;
     }
     .grid_1-1-1 {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
+      gap: 30px;
+    }
+    .grid_1-1-1 img {
+      opacity: 50%;
+    }
+    .grid_1-1-1 img:hover {
+      opacity: 100%;
+      transform: scale(1.1);
+    }
+    .grid_1-1-1 h4:hover {
+      transform: scale(1.1);
+    }
+    section {
+      margin-bottom: 110px;
+      padding: 30px;
+    }
+    section h3 h4 p {
+      color: white;
+    }
+    section :last-child h3 {
+      /* justify-self: center; */
+      align-self: center;
     }
   </style>
 </Main>
