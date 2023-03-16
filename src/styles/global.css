@@ -1,0 +1,13 @@
+img {
+  max-width: 100%;
+}
+.hero {
+  display: grid;
+}
+.hero > * {
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: center;
+  align-self: center;
+  color: white;
+}

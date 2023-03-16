@@ -1,0 +1,58 @@
+---
+import Hero from "../components/Hero.astro";
+import Main from "../layouts/Main.astro";
+---
+
+<Main>
+  <Hero>
+    <img src="homepage.webp" alt="homepage picture" />
+    <img src="logo-round-white.png" alt="logo" />
+  </Hero>
+  <article>
+    <section class="grid_1-1">
+      <img src="forside4.webp" alt="picture from KUNE" />
+      <div>
+        <h3>19 - 23 JULY KUNE FESTIVAL</h3>
+        <p>
+          A 5-day electronic music festival that takes place on an island 30 minutes away from Copenhagen. A one-of-its-kind celebration of the Scandinavian underground culture. A playground with five stages, two art galleries, and multiple art
+          installations. An intimate, holistic experience with access to a camping ground, food area, dipping spot, and unique sunsets. A true hidden gem.
+        </p>
+      </div>
+    </section>
+    <section class="grid_1-1-1">
+      <div>
+        <img src="forside1.webp" alt="" />
+        <h4></h4>
+      </div>
+      <div>
+        <img src="" alt="" />
+        <h4></h4>
+      </div>
+      <div>
+        <img src="" alt="" />
+        <h4></h4>
+      </div>
+    </section>
+    <section>
+      <h3>GET TO KNOW KUNE FESTIVAL</h3>
+      <img src="" alt="map over festival" />
+    </section>
+  </article>
+
+  <!-- css her -->
+  <style>
+    article {
+      background: rgb(197, 152, 222);
+      background: linear-gradient(180deg, rgba(197, 152, 222, 1) 0%, rgba(224, 89, 55, 1) 50%, rgba(159, 217, 102, 1) 100%);
+      min-height: 100%;
+    }
+    .grid_1-1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .grid_1-1-1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  </style>
+</Main>
