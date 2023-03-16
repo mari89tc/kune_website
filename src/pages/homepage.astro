@@ -6,7 +6,7 @@ import Main from "../layouts/Main.astro";
 <Main>
   <Hero>
     <img src="homepage.webp" alt="homepage picture" />
-    <img src="logo-round-white.png" alt="logo" />
+    <img class="logo_forside" src="logo-round-white.png" alt="logo" />
   </Hero>
   <article>
     <section class="grid_1-1">
@@ -33,14 +33,17 @@ import Main from "../layouts/Main.astro";
         <h4>Read more about KUNE Festival here!</h4>
       </div>
     </section>
-    <section>
+    <section class="map">
       <h3>GET TO KNOW KUNE FESTIVAL</h3>
-      <img src="" alt="map over festival" />
+      <img src="kort.svg" alt="map over festival" />
     </section>
   </article>
 
   <!-- css her -->
   <style>
+    .logo_forside {
+      width: 15%;
+    }
     article {
       background: rgb(197, 152, 222);
       background: linear-gradient(180deg, rgba(197, 152, 222, 1) 0%, rgba(224, 89, 55, 1) 50%, rgba(159, 217, 102, 1) 100%);
@@ -49,7 +52,7 @@ import Main from "../layouts/Main.astro";
     .grid_1-1 {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 20px;
+      gap: 30px;
     }
     .grid_1-1-1 {
       display: grid;
@@ -73,9 +76,12 @@ import Main from "../layouts/Main.astro";
     section h3 h4 p {
       color: white;
     }
-    section :last-child h3 {
-      /* justify-self: center; */
+    .map {
+      justify-self: center;
       align-self: center;
+    }
+    .map img {
+      width: 40%;
     }
   </style>
 </Main>
