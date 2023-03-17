@@ -2,6 +2,8 @@
 import "../styles/global.css";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
+import Hero from "../components/Hero.astro";
+import Main from "../layouts/Main.astro";
 ---
 
 <html lang="en">
@@ -14,66 +16,76 @@ import Footer from "../components/Footer.astro";
   </head>
   <body>
     <Nav />
-    <main>
+    <Main>
+      <!-- MAIN PAGE - FRONT IMAGE -->
+      <Hero>
+        <img src="../public/Ticketindex.jpg" alt="ticket picture" />
+        <h2>TICKETS</h2>
+      </Hero>
+      <article>
       <div class="ticket_container">
         <!-- CARD 1 - FULL PASS -->
         <div class="card_layout">
           <div class="card1">
             <img
-            src="../img.products/Ticket1.jpg"
+            src="../public/Ticket1.jpg"
             alt="Billede fra festival" />
-            <h3>Lorem Ipsum</h3>
-            <p>
-              Netus Mazim et w 1021 Nostramm successus elit error eu est Formam
-              Culpa malesuada te leo cras pede
-            </p>
+            <h3>FULL PASS</h3>
+            <h4>EVERTHING INCLUDED</h4>
+            <p>1.500 DKK</p>
           </div>
         </div>
         <!-- CARD 2 - 5 DAY -->
         <div class="card_layout">
           <div class="card2">
             <img
-            src="../img.products/Ticket2.jpg"
+            src="../public/Ticket2.jpg"
             alt="Billede fra festival" />
-            <h3>Lorem Ipsum</h3>
-            <p>
-              Netus Mazim et w 1021 Nostramm successus elit error eu est Formam
-              Culpa malesuada te leo cras pede
-            </p>
+            <h3>5 DAY</h3>
+            <h4>COSTUMIZE TICKET</h4>
+            <p>1.000 - 1.500 DKK</p>
           </div>
         </div>
         <!-- CARD 3 - WEEKEND -->
         <div class="card_layout">
           <div class="card2">
             <img
-            src="../img.products/Ticket3.jpg"
+            src="../public/Ticket3.jpg"
             alt="Billede fra festival" />
-            <h3>Lorem Ipsum</h3>
-            <p>
-              Netus Mazim et w 1021 Nostramm successus elit error eu est Formam
-              Culpa malesuada te leo cras pede
-            </p>
+            <h3>WEEKEND</h3>
+            <h4>CUSTOMIZE TICKET</h4>
+            <p>900 - 1.200 DKK</p>
           </div>
         </div>
+      
         <Footer />
       </div>
-    </main>
+      </article>
+    </Main>
   </body>
 </html>
 
 <style>
-  
+
+
 /* CONTAINER GRID */
 .ticket_container {
   display: grid;
   grid-template-columns: 3;
   display: flex;
   justify-content: space-evenly;
+  /* margin: 5rem; */
 }
 
+/* BACKGROUND COLOR */
+article {
+  background: rgb(197,152,222);
+  background: linear-gradient(180deg, rgba(197,152,222,1) 0%, rgba(224,89,55,1) 100%);
+}
 /* GENERAL CARD EDITS */
 .card_layout{
-  padding: 1rem;
+  padding: 2rem;
+  text-align: center;
 }
 
   /* CARD 1 DESIGN */
