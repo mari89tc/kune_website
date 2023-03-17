@@ -25,32 +25,38 @@ import Main from "../layouts/Main.astro";
       <article>
         <div class="ticket_container">
           <!-- CARD 1 - FULL PASS -->
-          <div class="card_layout">
-            <div class="card1">
-              <img src="../public/Ticket1.jpg" alt="Billede fra festival" />
-              <h3>FULL PASS</h3>
-              <h4>EVERTHING INCLUDED</h4>
-              <p>1.500 DKK</p>
-            </div>
-          </div>
+          <a href="/fullpass">
+            <div class="card_layout">
+              <div class="card1">
+                <img src="../public/Ticket1.jpg" alt="Billede fra festival" />
+                <h3>FULL PASS</h3>
+                <h4>EVERTHING INCLUDED</h4>
+                <p>1.500 DKK</p>
+              </div>
+            </div></a
+          >
           <!-- CARD 2 - 5 DAY -->
-          <div class="card_layout">
-            <div class="card2">
-              <img src="../public/Ticket2.jpg" alt="Billede fra festival" />
-              <h3>5 DAY</h3>
-              <h4>COSTUMIZE TICKET</h4>
-              <p>1.000 - 1.500 DKK</p>
-            </div>
-          </div>
+          <a href="/5day">
+            <div class="card_layout">
+              <div class="card2">
+                <img src="../public/Ticket2.jpg" alt="Billede fra festival" />
+                <h3>5 DAY</h3>
+                <h4>COSTUMIZE TICKET</h4>
+                <p>1.000 - 1.500 DKK</p>
+              </div>
+            </div></a
+          >
           <!-- CARD 3 - WEEKEND -->
-          <div class="card_layout">
-            <div class="card2">
-              <img src="../public/Ticket3.jpg" alt="Billede fra festival" />
-              <h3>WEEKEND</h3>
-              <h4>CUSTOMIZE TICKET</h4>
-              <p>900 - 1.200 DKK</p>
-            </div>
-          </div>
+          <a href="/weekend">
+            <div class="card_layout">
+              <div class="card2">
+                <img src="../public/Ticket3.jpg" alt="Billede fra festival" />
+                <h3>WEEKEND</h3>
+                <h4>CUSTOMIZE TICKET</h4>
+                <p>900 - 1.200 DKK</p>
+              </div>
+            </div></a
+          >
 
           <Footer />
         </div>
@@ -85,10 +91,10 @@ import Main from "../layouts/Main.astro";
   .card_layout {
     padding: 2rem;
     text-align: center;
+    text-decoration: none;
   }
-  h5 {
-    grid-column: 3;
-    grid-row: 1;
+  a {
+    text-decoration: none;
   }
 
   /* CARD 1 DESIGN */
