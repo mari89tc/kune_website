@@ -10,13 +10,105 @@ import Footer from "../components/Footer.astro";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Home</title>
+    <title>products</title>
   </head>
   <body>
     <Nav />
     <main>
-
+      <div class="ticket_container">
+        <!-- CARD 1 - FULL PASS -->
+        <div class="card_layout">
+          <div class="card1">
+            <img
+            src="../img.products/Ticket1.jpg"
+            alt="Billede fra festival" />
+            <h3>Lorem Ipsum</h3>
+            <p>
+              Netus Mazim et w 1021 Nostramm successus elit error eu est Formam
+              Culpa malesuada te leo cras pede
+            </p>
+          </div>
+        </div>
+        <!-- CARD 2 - 5 DAY -->
+        <div class="card_layout">
+          <div class="card2">
+            <img
+            src="../img.products/Ticket2.jpg"
+            alt="Billede fra festival" />
+            <h3>Lorem Ipsum</h3>
+            <p>
+              Netus Mazim et w 1021 Nostramm successus elit error eu est Formam
+              Culpa malesuada te leo cras pede
+            </p>
+          </div>
+        </div>
+        <!-- CARD 3 - WEEKEND -->
+        <div class="card_layout">
+          <div class="card2">
+            <img
+            src="../img.products/Ticket3.jpg"
+            alt="Billede fra festival" />
+            <h3>Lorem Ipsum</h3>
+            <p>
+              Netus Mazim et w 1021 Nostramm successus elit error eu est Formam
+              Culpa malesuada te leo cras pede
+            </p>
+          </div>
+        </div>
+        <Footer />
+      </div>
     </main>
-    <Footer />
   </body>
 </html>
+
+<style>
+  
+/* CONTAINER GRID */
+.ticket_container {
+  display: grid;
+  grid-template-columns: 3;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* GENERAL CARD EDITS */
+.card_layout{
+  padding: 1rem;
+}
+
+  /* CARD 1 DESIGN */
+  .card1 img {
+    height: 60%;
+    object-fit: cover;
+  }
+  .card1 {
+    grid-column: 1;
+    background: rgb(197, 152, 222);
+    background: linear-gradient(180deg, rgba(197, 152, 222, 1) 0%, rgba(224, 89, 55, 1) 50%, rgba(159, 217, 102, 1) 100%);
+    min-height: 100%;
+  }
+
+  /* CARD 2 DESIGN */
+  .card2 img {
+    height: 60%;
+    object-fit: cover;
+  }
+  .card2 {
+    grid-column: 2;
+    background: rgb(197, 152, 222);
+    background: linear-gradient(180deg, rgba(197, 152, 222, 1) 0%, rgba(224, 89, 55, 1) 50%, rgba(159, 217, 102, 1) 100%);
+    min-height: 100%;
+  }
+
+  /* CARD 3 DESIGN */
+  .card3 img {
+    height: 60%;
+    object-fit: cover;
+  }
+  .card3 {
+    grid-column: 3;
+    background: rgb(197, 152, 222);
+    background: linear-gradient(180deg, rgba(197, 152, 222, 1) 0%, rgba(224, 89, 55, 1) 50%, rgba(159, 217, 102, 1) 100%);
+    min-height: 100%;
+  }
+</style>
