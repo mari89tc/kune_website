@@ -3,6 +3,8 @@ import "../styles/global.css";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
 import Menu from "../components/Menu.astro";
+import Hero from "../components/Hero.astro";
+import Main from "../layouts/Main.astro";
 ---
 
 <html lang="en">
@@ -16,7 +18,107 @@ import Menu from "../components/Menu.astro";
   <body>
     <Nav />
     <Menu />
-    <main></main>
+    <Main>
+      <Hero slot="header-slot">
+        <img src="homepage.webp" alt="homepage picture" />
+        <img class="logo_forside" src="logo-round-white.png" alt="logo" />
+      </Hero>
+      <article>
+        <section class="grid_1-1">
+          <img src="forside4.webp" alt="picture from KUNE" />
+          <div>
+            <h3>19 - 23 JULY KUNE FESTIVAL</h3>
+            <p>
+              A 5-day electronic music festival that takes place on an island 30 minutes away from Copenhagen. A one-of-its-kind celebration of the Scandinavian underground culture. A playground with five stages, two art galleries, and multiple art
+              installations. An intimate, holistic experience with access to a camping ground, food area, dipping spot, and unique sunsets. A true hidden gem.
+            </p>
+          </div>
+        </section>
+        <section class="grid_1-1-1">
+          <div class="imghover">
+            <img src="forside1.webp" alt="picture from workshop" />
+            <h4>Do you want to be volunteer at KUNE Festival?</h4>
+          </div>
+          <div class="imghover">
+            <img src="forside3.webp" alt="picture from festival" />
+            <h4>Who’s playing at KUNE Festival 2023?</h4>
+          </div>
+          <div class="imghover">
+            <img src="forside2.webp" alt="picture of art" />
+            <h4>Read more about KUNE Festival here!</h4>
+          </div>
+        </section>
+        <section class="map">
+          <h3>GET TO KNOW KUNE FESTIVAL</h3>
+          <img src="kort.svg" alt="map over festival" />
+        </section>
+      </article>
+    </Main>
     <Footer />
   </body>
 </html>
+<!-- css her -->
+<style>
+  .logo_forside {
+    width: 15%;
+  }
+  article {
+    background: rgb(197, 152, 222);
+    background: linear-gradient(180deg, rgba(197, 152, 222, 1) 0%, rgba(224, 89, 55, 1) 50%, rgba(159, 217, 102, 1) 100%);
+    min-height: 100%;
+  }
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  .grid_1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+  }
+  .imghover img {
+    opacity: 50%;
+  }
+  .imghover img:hover {
+    opacity: 100%;
+  }
+  .imghover:hover {
+    transform: scale(1.1);
+  }
+  section {
+    margin-bottom: 110px;
+    padding: 30px;
+  }
+  section h3 h4 p {
+    color: white;
+  }
+  .map {
+    display: grid;
+  }
+  .map img {
+    justify-self: center;
+    align-self: center;
+  }
+  .map h3 {
+    justify-self: center;
+    align-self: center;
+  }
+  .map img {
+    width: 40%;
+  }
+  @media (max-width: 600px) {
+    .grid_1-1 {
+      display: block;
+    }
+    .grid_1-1-1 {
+      display: block;
+    }
+    .imghover {
+      margin-bottom: 80px;
+    }
+    .map img {
+      width: 80%;
+    }
+  }
+</style>
