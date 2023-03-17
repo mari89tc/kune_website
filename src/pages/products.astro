@@ -2,6 +2,8 @@
 import "../styles/global.css";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
+import Hero from "../components/Hero.astro";
+import Main from "../layouts/Main.astro";
 ---
 
 <html lang="en">
@@ -10,13 +12,142 @@ import Footer from "../components/Footer.astro";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Home</title>
+    <title>products</title>
   </head>
   <body>
     <Nav />
-    <main>
+    <Main>
+      <!-- MAIN PAGE - FRONT IMAGE -->
+      <Hero>
+        <img src="../public/Ticketindex.jpg" alt="ticket picture" />
+        <h2>TICKETS</h2>
+      </Hero>
+      <article>
+        <div class="ticket_container">
+          <!-- CARD 1 - FULL PASS -->
+          <a href="/fullpass">
+            <div class="card_layout">
+              <div class="card1">
+                <img src="../public/Ticket1.jpg" alt="Billede fra festival" />
+                <h3>FULL PASS</h3>
+                <h4>EVERTHING INCLUDED</h4>
+                <p>1.500 DKK</p>
+              </div>
+            </div></a
+          >
+          <!-- CARD 2 - 5 DAY -->
+          <a href="/5day">
+            <div class="card_layout">
+              <div class="card2">
+                <img src="../public/Ticket2.jpg" alt="Billede fra festival" />
+                <h3>5 DAY</h3>
+                <h4>COSTUMIZE TICKET</h4>
+                <p>1.000 - 1.500 DKK</p>
+              </div>
+            </div></a
+          >
+          <!-- CARD 3 - WEEKEND -->
+          <a href="/weekend">
+            <div class="card_layout">
+              <div class="card2">
+                <img src="../public/Ticket3.jpg" alt="Billede fra festival" />
+                <h3>WEEKEND</h3>
+                <h4>CUSTOMIZE TICKET</h4>
+                <p>900 - 1.200 DKK</p>
+              </div>
+            </div></a
+          >
 
-    </main>
-    <Footer />
+          <Footer />
+        </div>
+      </article>
+    </Main>
   </body>
 </html>
+
+<style>
+  @media (min-width: 900px) {
+    /* COMPUTER SCREEN LAYOUT */
+    /* CONTAINER GRID */
+    .ticket_container {
+      display: grid;
+      grid-template-columns: 3;
+      display: flex;
+      justify-content: space-evenly;
+      /* margin: 5rem; */
+    }
+  }
+
+  /* BACKGROUND COLOR */
+  article {
+    background: rgb(197, 152, 222);
+    background: linear-gradient(
+      180deg,
+      rgba(197, 152, 222, 1) 0%,
+      rgba(224, 89, 55, 1) 100%
+    );
+  }
+  /* GENERAL CARD EDITS */
+  .card_layout {
+    padding: 2rem;
+    text-align: center;
+    text-decoration: none;
+  }
+  a {
+    text-decoration: none;
+  }
+
+  /* CARD 1 DESIGN */
+  .card1 img {
+    height: 60%;
+    object-fit: cover;
+  }
+  .card1 {
+    grid-column: 1;
+    grid-row: 2;
+    background: rgb(197, 152, 222);
+    background: linear-gradient(
+      180deg,
+      rgba(197, 152, 222, 1) 0%,
+      rgba(224, 89, 55, 1) 50%,
+      rgba(159, 217, 102, 1) 100%
+    );
+    min-height: 100%;
+  }
+
+  /* CARD 2 DESIGN */
+  .card2 img {
+    height: 60%;
+    object-fit: cover;
+  }
+  .card2 {
+    grid-column: 2;
+    grid-row: 2;
+    background: rgb(197, 152, 222);
+    background: linear-gradient(
+      180deg,
+      rgba(197, 152, 222, 1) 0%,
+      rgba(224, 89, 55, 1) 50%,
+      rgba(159, 217, 102, 1) 100%
+    );
+    min-height: 100%;
+  }
+
+  /* CARD 3 DESIGN */
+  .card3 img {
+    height: 60%;
+    object-fit: cover;
+  }
+  .card3 {
+    grid-column: 3;
+    grid-row: 2;
+    background: rgb(197, 152, 222);
+    background: linear-gradient(
+      180deg,
+      rgba(197, 152, 222, 1) 0%,
+      rgba(224, 89, 55, 1) 50%,
+      rgba(159, 217, 102, 1) 100%
+    );
+    min-height: 100%;
+  }
+</style>

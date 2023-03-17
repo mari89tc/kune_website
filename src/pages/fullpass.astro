@@ -1,0 +1,82 @@
+---
+import "../styles/global.css";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+import Main from "../layouts/Main.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>FULL PASS</title>
+  </head>
+  <Nav />
+  <Main />
+  <article>
+    <div class="fullpass_container">
+      <img src="../public/Ticket1.jpg" alt="Ticket 1" />
+
+      <div class="fullpass_description">
+        <h3>FULL PASS</h3>
+        <h4>EVERYTHING INCLUDED</h4>
+        <h4>1.000 - 1.500 DKK</h4>
+        <p>
+          Participants have access to the festival site. This include boat
+          transport, access to concerts, food and drinks, camping grounds.
+        </p>
+        <p>It is not allowed to bring your own alcohol</p>
+        <div class="customize_box">
+          <p>CUSTOMIZE TICKET</p>
+          <p>BOAT TRANSPORT</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <Footer />
+
+  <style>
+    /* MOBILE VIEW */
+    @media (max-width: 900px) {
+      .fullpass_description {
+        text-align: center;
+        padding: 30px;
+      }
+    }
+    /* COMPUTER VIEW */
+    @media (min-width: 900px) {
+      .fullpass_container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+      }
+    }
+    /* IMAGE LEFT SIDE */
+    img {
+      grid-column: 1;
+    }
+    .fullpass_description {
+      grid-column: 2;
+    }
+    .customize_box {
+      display: flex;
+      flex-direction: row;
+      border-width: 3px;
+      border-style: solid;
+      border-color: white;
+    }
+    article {
+      background: rgb(197, 152, 222);
+      background: linear-gradient(
+        180deg,
+        rgba(197, 152, 222, 1) 0%,
+        rgba(224, 89, 55, 1) 100%
+      );
+    }
+  </style>
+
+
+</html>

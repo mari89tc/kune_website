@@ -66,5 +66,41 @@ import Main from "../layouts/Main.astro";
       line-height: 45px;
       color: #ffffff;
     }
+    @media (max-width: 600px) {
+      article {
+        margin-bottom: 110px;
+        padding: 30px;
+        justify-self: center;
+        align-self: center;
+      }
+      form {
+        padding: 30px;
+      }
+      input {
+        width: 100%;
+        padding: 20px;
+        background-color: #e05937;
+        text-decoration: none;
+        color: #ffffff;
+        border: none;
+      }
+      input:focus {
+        width: 50%;
+        padding: 20px;
+        background-color: #e05937;
+        text-decoration: none;
+        color: #ffffff;
+        border: none;
+        outline: none;
+      }
+      label {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 45px;
+        color: #ffffff;
+      }
+    }
   </style>
 </Main>
