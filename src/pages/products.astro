@@ -24,6 +24,7 @@ import Main from "../layouts/Main.astro";
       </Hero>
       <article>
       <div class="ticket_container">
+        
         <!-- CARD 1 - FULL PASS -->
         <div class="card_layout">
           <div class="card1">
@@ -66,8 +67,7 @@ import Main from "../layouts/Main.astro";
 </html>
 
 <style>
-
-
+@media (min-width: 900px) { /* COMPUTER SCREEN LAYOUT */
 /* CONTAINER GRID */
 .ticket_container {
   display: grid;
@@ -75,6 +75,7 @@ import Main from "../layouts/Main.astro";
   display: flex;
   justify-content: space-evenly;
   /* margin: 5rem; */
+}
 }
 
 /* BACKGROUND COLOR */
@@ -87,6 +88,10 @@ article {
   padding: 2rem;
   text-align: center;
 }
+h5{
+  grid-column: 3;
+  grid-row: 1;
+}
 
   /* CARD 1 DESIGN */
   .card1 img {
@@ -95,9 +100,11 @@ article {
   }
   .card1 {
     grid-column: 1;
+    grid-row: 2;
     background: rgb(197, 152, 222);
     background: linear-gradient(180deg, rgba(197, 152, 222, 1) 0%, rgba(224, 89, 55, 1) 50%, rgba(159, 217, 102, 1) 100%);
     min-height: 100%;
+    
   }
 
   /* CARD 2 DESIGN */
@@ -107,6 +114,7 @@ article {
   }
   .card2 {
     grid-column: 2;
+    grid-row: 2;
     background: rgb(197, 152, 222);
     background: linear-gradient(180deg, rgba(197, 152, 222, 1) 0%, rgba(224, 89, 55, 1) 50%, rgba(159, 217, 102, 1) 100%);
     min-height: 100%;
@@ -119,6 +127,7 @@ article {
   }
   .card3 {
     grid-column: 3;
+    grid-row: 2;
     background: rgb(197, 152, 222);
     background: linear-gradient(180deg, rgba(197, 152, 222, 1) 0%, rgba(224, 89, 55, 1) 50%, rgba(159, 217, 102, 1) 100%);
     min-height: 100%;
