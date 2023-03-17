@@ -1,6 +1,5 @@
 ---
 import "../styles/global.css";
-import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
 import Menu from "../components/Menu.astro";
 import Hero from "../components/Hero.astro";
@@ -16,8 +15,7 @@ import Main from "../layouts/Main.astro";
     <title>Homepage</title>
   </head>
   <body>
-    <Nav />
-    <Menu />
+    <!-- <Menu /> -->
     <Main>
       <Hero slot="header-slot">
         <img src="homepage.webp" alt="homepage picture" />
@@ -52,9 +50,9 @@ import Main from "../layouts/Main.astro";
           <h3>GET TO KNOW KUNE FESTIVAL</h3>
           <img src="kort.svg" alt="map over festival" />
         </section>
+        <Footer />
       </article>
     </Main>
-    <Footer />
   </body>
 </html>
 <!-- css her -->

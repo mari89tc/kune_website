@@ -56,6 +56,15 @@ h4 {
   line-height: 24px;
   color: #ffffff;
 }
+/* overskrifter ved footer */
+h5 {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+}
 /* brødtekster */
 p {
   font-family: "Montserrat", sans-serif;

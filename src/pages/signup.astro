@@ -2,6 +2,7 @@
 import Hero from "../components/Hero.astro";
 import Main from "../layouts/Main.astro";
 import Button from "../components/Button.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Main>
@@ -30,32 +31,75 @@ import Button from "../components/Button.astro";
         </div>
       </form>
     </section>
+    <Footer />
   </article>
+</Main>
+<style>
+  article {
+    background: rgb(197, 152, 222);
+    background: linear-gradient(180deg, rgba(197, 152, 222, 1) 0%, rgba(224, 89, 55, 1) 100%);
+  }
 
-  <style>
-    article {
-      background: rgb(197, 152, 222);
-      background: linear-gradient(180deg, rgba(197, 152, 222, 1) 0%, rgba(224, 89, 55, 1) 100%);
-    }
+  article {
+    margin-bottom: 110px;
+    padding: 30px;
+  }
+  section {
+    display: grid;
+  }
+  section h3 {
+    justify-self: center;
+    align-self: center;
+  }
+  form {
+    padding: 30px;
+    padding-left: 200px;
+  }
 
+  input {
+    width: 70%;
+    padding: 20px;
+    background-color: #e05937;
+    text-decoration: none;
+    color: #ffffff;
+    border: none;
+  }
+  input:focus {
+    width: 70%;
+    padding: 20px;
+    background-color: #e05937;
+    text-decoration: none;
+    color: #ffffff;
+    border: none;
+    outline: none;
+  }
+  label {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 45px;
+    color: #ffffff;
+  }
+  .applybutton {
+    display: grid;
+  }
+  .applybutton button {
+    justify-self: center;
+    place-self: center;
+  }
+  @media (max-width: 600px) {
     article {
       margin-bottom: 110px;
       padding: 30px;
-    }
-    section {
-      display: grid;
-    }
-    section h3 {
       justify-self: center;
       align-self: center;
     }
     form {
       padding: 30px;
-      padding-left: 200px;
     }
-
     input {
-      width: 70%;
+      width: 100%;
       padding: 20px;
       background-color: #e05937;
       text-decoration: none;
@@ -63,7 +107,7 @@ import Button from "../components/Button.astro";
       border: none;
     }
     input:focus {
-      width: 70%;
+      width: 50%;
       padding: 20px;
       background-color: #e05937;
       text-decoration: none;
@@ -75,52 +119,9 @@ import Button from "../components/Button.astro";
       font-family: "Montserrat";
       font-style: normal;
       font-weight: 500;
-      font-size: 18px;
+      font-size: 16px;
       line-height: 45px;
       color: #ffffff;
     }
-    .applybutton {
-      display: grid;
-    }
-    .applybutton button {
-      justify-self: center;
-      place-self: center;
-    }
-    @media (max-width: 600px) {
-      article {
-        margin-bottom: 110px;
-        padding: 30px;
-        justify-self: center;
-        align-self: center;
-      }
-      form {
-        padding: 30px;
-      }
-      input {
-        width: 100%;
-        padding: 20px;
-        background-color: #e05937;
-        text-decoration: none;
-        color: #ffffff;
-        border: none;
-      }
-      input:focus {
-        width: 50%;
-        padding: 20px;
-        background-color: #e05937;
-        text-decoration: none;
-        color: #ffffff;
-        border: none;
-        outline: none;
-      }
-      label {
-        font-family: "Montserrat";
-        font-style: normal;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 45px;
-        color: #ffffff;
-      }
-    }
-  </style>
-</Main>
+  }
+</style>
