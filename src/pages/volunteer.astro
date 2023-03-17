@@ -1,4 +1,5 @@
 ---
+import Button from "../components/Button.astro";
 import Hero from "../components/Hero.astro";
 import Main from "../layouts/Main.astro";
 ---
@@ -44,37 +45,47 @@ import Main from "../layouts/Main.astro";
       </div>
       <img src="volunteer4.webp" alt="People at KUNE by the ocean" />
     </section>
+    <section class="jointeam">
+      <Button text="JOIN THE TEAM HERE" />
+    </section>
   </article>
+</Main>
 
-  <style>
-    article {
-      background: rgb(197, 152, 222);
-      background: linear-gradient(180deg, rgba(197, 152, 222, 1) 0%, rgba(224, 89, 55, 1) 100%);
-    }
+<style>
+  article {
+    background: rgb(197, 152, 222);
+    background: linear-gradient(180deg, rgba(197, 152, 222, 1) 0%, rgba(224, 89, 55, 1) 100%);
+  }
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  section {
+    margin-bottom: 110px;
+    padding: 30px;
+  }
+  .jointeam {
+    display: grid;
+  }
+  .jointeam button {
+    place-self: center;
+    justify-self: center;
+  }
+  @media (max-width: 600px) {
     .grid_1-1 {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 30px;
+      grid-template-columns: 1fr;
     }
     section {
       margin-bottom: 110px;
       padding: 30px;
     }
-    @media (max-width: 600px) {
-      .grid_1-1 {
-        display: grid;
-        grid-template-columns: 1fr;
-      }
-      section {
-        margin-bottom: 110px;
-        padding: 30px;
-      }
-      .order1 img {
-        order: -1;
-      }
-      .order2 {
-        order: -1;
-      }
+    .order1 img {
+      order: -1;
     }
-  </style>
-</Main>
+    .order2 {
+      order: -1;
+    }
+  }
+</style>
