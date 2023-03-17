@@ -1,28 +1,43 @@
 ---
+import Button from "../components/Button.astro";
+import Footer from "../components/Footer.astro";
 import Hero from "../components/Hero.astro";
 import Main from "../layouts/Main.astro";
+import Lineup from "../components/Lineup.astro";
 ---
 
 <Main>
-  <Hero>
+  <Hero slot="header-slot">
     <img src="lineupforside.webp" alt="lineup picture" />
     <h2>LINEUP</h2>
   </Hero>
   <article>
+    <div class="grid_1-1-1-1">
+      <Button text="WEDNESDAY" />
+      <Button text="THURSDAY" />
+      <Button text="FRIDAY" />
+      <Button text="SATURDAY" />
+    </div>
     <h3>her er en h3</h3>
     <section class="grid_1-1-1"></section>
+    <Lineup />
+    <Footer />
   </article>
-
-  <style>
-    article {
-      padding: 20px;
-      background: rgb(197, 152, 222);
-      background: linear-gradient(180deg, rgba(197, 152, 222, 1) 0%, rgba(159, 217, 102, 1) 100%);
-    }
-    .grid_1-1-1 {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 30px;
-    }
-  </style>
 </Main>
+<style>
+  article {
+    padding: 20px;
+    background: rgb(197, 152, 222);
+    background: linear-gradient(180deg, rgba(197, 152, 222, 1) 0%, rgba(159, 217, 102, 1) 100%);
+  }
+  .grid_1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+  }
+  .grid_1-1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+  }
+</style>
