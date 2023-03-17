@@ -19,10 +19,24 @@ import Menu from "../components/Menu.astro";
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet" />
   </head>
   <body>
-    <Menu />
-    <main>
-      <slot />
-    </main>
-    <Footer />
+    <header>
+      <div id="mainmenu">
+        <slot name="header-slot" />
+        <div class="logo">
+          <a href="homepage"><img src="logo-round-white.png" alt="logo" /></a>
+        </div>
+        <Menu />
+      </div>
+
+      <main>
+        <slot />
+      </main>
+      <Footer />
+    </header>
   </body>
 </html>
+<style>
+  .logo {
+    width: 5%;
+  }
+</style>

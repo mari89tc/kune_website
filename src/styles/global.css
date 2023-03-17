@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box;
 }
+body {
+  margin: 0;
+}
 /* billeder samt tekst til top af siderne */
 img {
   max-width: 100%;
@@ -14,6 +17,14 @@ img {
   justify-self: center;
   align-self: center;
   color: white;
+}
+
+#mainmenu {
+  display: grid;
+}
+#mainmenu > * {
+  grid-column: 1;
+  grid-row: 1;
 }
 
 /* overskrift på billeder i top */

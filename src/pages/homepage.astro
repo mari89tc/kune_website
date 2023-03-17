@@ -4,7 +4,7 @@ import Main from "../layouts/Main.astro";
 ---
 
 <Main>
-  <Hero>
+  <Hero slot="header-slot">
     <img src="homepage.webp" alt="homepage picture" />
     <img class="logo_forside" src="logo-round-white.png" alt="logo" />
   </Hero>
@@ -74,6 +74,9 @@ import Main from "../layouts/Main.astro";
     }
     section h3 h4 p {
       color: white;
+    }
+    .map {
+      display: grid;
     }
     .map img {
       justify-self: center;
