@@ -75,12 +75,30 @@ import Main from "../layouts/Main.astro";
     section h3 h4 p {
       color: white;
     }
-    .map {
+    .map img {
+      justify-self: center;
+      align-self: center;
+    }
+    .map h3 {
       justify-self: center;
       align-self: center;
     }
     .map img {
       width: 40%;
+    }
+    @media (max-width: 600px) {
+      .grid_1-1 {
+        display: block;
+      }
+      .grid_1-1-1 {
+        display: block;
+      }
+      .imghover {
+        margin-bottom: 80px;
+      }
+      .map img {
+        width: 80%;
+      }
     }
   </style>
 </Main>
