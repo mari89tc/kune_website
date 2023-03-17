@@ -15,28 +15,106 @@ import Footer from "../components/Footer.astro";
   <body>
     <Nav />
     <main>
-      <!-- 3 TICKETS -->
-      <article>
-        <img src="../img.products/Ticket1.jpg" alt="Billede fra festival" />
-        <h1>FULL PASS</h1>
-        <h2>EVERTHING INCLUDED</h2>
-        <p>1.500 DKK</p>
-      </article>
+      <div class="ticket_container">
+        <div class="card_layout">
+          <div class="card1">
+            <img src="images/img1.webp" alt="Smiling woman" />
+            <h3>Lorem Ipsum</h3>
+            <p>
+              Netus Mazim et w 1021 Nostramm successus elit error eu est Formam
+              Culpa malesuada te leo cras pede
+            </p>
+          </div>
 
-      <article>
-        <img src="../img.products/Ticket2.jpg" alt="Billede fra festival" />
-        <h1>5 DAY</h1>
-        <h2>COSTUMIZE TICKET</h2>
-        <p>1.000 - 1.500 DKK</p>
-      </article>
+          <!-- 3 TICKETS
+        <article class="ticket_1">
+          <img
+            src="../img.products/Ticket1.jpg"
+            alt="Billede fra festival"
+            height="350"
+            width="300"
+          />
+          <h1>FULL PASS</h1>
+          <h2>EVERTHING INCLUDED</h2>
+          <p>1.500 DKK</p>
+        </article>
 
-      <article>
-        <img src="../img.products/Ticket2.jpg" alt="Billede fra festival" />
-        <h1>WEEKEND</h1>
-        <h2>CUSTOMIZE TICKET</h2>
-        <p>900 - 1.200 DKK</p>
-      </article>
+        <article class="ticket_2">
+          <img
+            src="../img.products/Ticket2.jpg"
+            alt="Billede fra festival"
+            height="350"
+            width="300"
+          />
+          <h1>5 DAY</h1>
+          <h2>COSTUMIZE TICKET</h2>
+          <p>1.000 - 1.500 DKK</p>
+        </article>
+
+        <article class="ticket_3">
+          <img
+            src="../img.products/Ticket2.jpg"
+            alt="Billede fra festival"
+            height="350"
+            width="300"
+          />
+          <h1>WEEKEND</h1>
+          <h2>CUSTOMIZE TICKET</h2>
+          <p>900 - 1.200 DKK</p>
+        </article> -->
+        </div>
+      </div>
+      <Footer />
     </main>
-    <Footer />
   </body>
+
+  <style>
+    .ticket_container {
+      display: grid;
+      grid-template-columns: 3;
+      display: flex;
+      justify-content: space-evenly;
+    }
+    /* .ticket_1 {
+    grid-column: 1;
+    text-align: center;
+    background: rgb(131, 58, 180);
+    background: linear-gradient(
+      99deg,
+      rgba(131, 58, 180, 1) 0%,
+      rgba(253, 29, 29, 0.665703781512605) 50%,
+      rgba(252, 176, 69, 1) 100%
+    );
+  }
+  .ticket_2 {
+    grid-column: 2;
+    text-align: center;
+    background: rgb(131, 58, 180);
+    background: linear-gradient(
+      99deg,
+      rgba(131, 58, 180, 1) 0%,
+      rgba(253, 29, 29, 0.665703781512605) 50%,
+      rgba(252, 176, 69, 1) 100%
+    );
+  }
+  .ticket_3 {
+    grid-column: 3;
+    text-align: center;
+    background: rgb(131, 58, 180);
+    background: linear-gradient(
+      99deg,
+      rgba(131, 58, 180, 1) 0%,
+      rgba(253, 29, 29, 0.665703781512605) 50%,
+      rgba(252, 176, 69, 1) 100%
+    );
+  } */
+    .card1 {
+      border: 1px solid black;
+      background-color: #fff;
+    }
+    .card1 img {
+      height: 60%;
+      object-fit: cover;
+    }
+  </style>
 </html>
