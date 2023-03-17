@@ -16,15 +16,16 @@ import Main from "../layouts/Main.astro";
   </head>
   <body>
     <Nav />
-    <Main>
-      <!-- MAIN PAGE - FRONT IMAGE -->
-      <Hero>
-        <img src="../public/Ticketindex.jpg" alt="ticket picture" />
-        <h2>TICKETS</h2>
-      </Hero>
-      <article>
-        <div class="ticket_container">
-          <!-- CARD 1 - FULL PASS -->
+    <Main />
+    <!-- MAIN PAGE - FRONT IMAGE -->
+    <Hero>
+      <img src="../public/Ticketindex.jpg" alt="ticket picture" />
+      <h2>TICKETS</h2>
+    </Hero>
+    <article>
+      <div class="ticket_container">
+        <!-- CARD 1 - FULL PASS -->
+        <a href="../fullpass.astro">
           <div class="card_layout">
             <div class="card1">
               <img src="../public/Ticket1.jpg" alt="Billede fra festival" />
@@ -33,7 +34,9 @@ import Main from "../layouts/Main.astro";
               <p>1.500 DKK</p>
             </div>
           </div>
-          <!-- CARD 2 - 5 DAY -->
+        </a>
+        <!-- CARD 2 - 5 DAY -->
+        <a href="../5day.astro">
           <div class="card_layout">
             <div class="card2">
               <img src="../public/Ticket2.jpg" alt="Billede fra festival" />
@@ -42,7 +45,9 @@ import Main from "../layouts/Main.astro";
               <p>1.000 - 1.500 DKK</p>
             </div>
           </div>
-          <!-- CARD 3 - WEEKEND -->
+        </a>
+        <!-- CARD 3 - WEEKEND -->
+        <a href="../weekend.astro">
           <div class="card_layout">
             <div class="card2">
               <img src="../public/Ticket3.jpg" alt="Billede fra festival" />
@@ -51,11 +56,11 @@ import Main from "../layouts/Main.astro";
               <p>900 - 1.200 DKK</p>
             </div>
           </div>
+        </a>
 
-          <Footer />
-        </div>
-      </article>
-    </Main>
+        <Footer />
+      </div>
+    </article>
   </body>
 </html>
 
@@ -70,6 +75,10 @@ import Main from "../layouts/Main.astro";
       justify-content: space-evenly;
       /* margin: 5rem; */
     }
+  }
+  /* LINKS */
+  a {
+    text-decoration: none;
   }
 
   /* BACKGROUND COLOR */
