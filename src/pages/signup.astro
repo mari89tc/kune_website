@@ -1,0 +1,70 @@
+---
+import Hero from "../components/Hero.astro";
+import Main from "../layouts/Main.astro";
+---
+
+<Main>
+  <Hero>
+    <img src="volunteer3.webp" alt="volunteer picture" />
+    <h2>VOLUNTEER</h2>
+  </Hero>
+  <article>
+    <h3>Join KUNE Festival team here</h3>
+    <form name="kontakt">
+      <div>
+        <label for="navn"><br />Full Name<br /></label>
+        <input id="navn" type="text" name="fname" />
+      </div>
+      <div>
+        <label for="email"><br />Email<br /></label>
+        <input id="email" type="text" name="email" />
+      </div>
+      <div>
+        <label for="tel"><br />Phone number<br /></label>
+        <input id="tel" type="tel" name="Tlf. nummer" />
+      </div>
+      <button class="button">Indsend</button>
+    </form>
+  </article>
+
+  <style>
+    article {
+      background: rgb(197, 152, 222);
+      background: linear-gradient(180deg, rgba(197, 152, 222, 1) 0%, rgba(224, 89, 55, 1) 100%);
+    }
+    article {
+      margin-bottom: 110px;
+      padding: 30px;
+      justify-self: center;
+      align-self: center;
+    }
+    form {
+      padding: 30px;
+    }
+    input {
+      width: 50%;
+      padding: 20px;
+      background-color: #e05937;
+      text-decoration: none;
+      color: #ffffff;
+      border: none;
+    }
+    input:focus {
+      width: 50%;
+      padding: 20px;
+      background-color: #e05937;
+      text-decoration: none;
+      color: #ffffff;
+      border: none;
+      outline: none;
+    }
+    label {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 45px;
+      color: #ffffff;
+    }
+  </style>
+</Main>

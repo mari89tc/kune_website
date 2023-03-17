@@ -1,0 +1,64 @@
+---
+import Hero from "../components/Hero.astro";
+import Main from "../layouts/Main.astro";
+---
+
+<Main>
+  <Hero>
+    <img src="volunteer3.webp" alt="volunteer picture" />
+    <h2>VOLUNTEER</h2>
+  </Hero>
+  <article>
+    <section class="grid_1-1">
+      <div>
+        <h3>Volunteer at KUNE Festival?</h3>
+        <p>
+          Volunteers are at the heart of KUNE Festival and essential to our community. They are the ones who help us realize our vision, and we are continually amazed at the skills, dedication, and enthusiasm they bring to the festival. Volunteering
+          should be a two-way process, and we always aim to create a space where our volunteers can grow, learn and connect with others.
+        </p>
+      </div>
+      <img src="volunteer1.webp" alt="a concert at KUNE" />
+    </section>
+    <section class="grid_1-1">
+      <img src="volunteer2.webp" alt="Man taking a picture" />
+      <div>
+        <h3>What does that imply?</h3>
+        <ul>
+          <li>Meet new people and work with artists</li>
+          <li>All individuals are welcome</li>
+          <li>Be part of a vibrant, creative and positive community</li>
+          <li>Unique oppportunity to explore different styles of music and art</li>
+          <li>Be part of a team that are committed to create something meaningful and exciting</li>
+        </ul>
+      </div>
+    </section>
+    <section class="grid_1-1">
+      <div>
+        <h3>Advantages</h3>
+        <p>
+          Joining the KUNE Festival volunteer team is an incredible opportunity to be part of a unique and creative community that builds something together. As a volunteer, you will receive a free ticket to the festival, food and drink tickets for
+          your shifts, and the chance to attend dedicated volunteer events before and after the festival. Before the festival, we'll host a free volunteer weekend on the island where you can participate in workshops, explore the island's beauty, and
+          connect with other volunteers and the organisers behind the festival. After the festival, we have a decompression event where we gather to share memories and give feedback.‍ By volunteering with KUNE Festival, you will have a chance to
+          develop new skills, gain valuable work experience, and network with professionals in the music and arts industry. So come join us and be part of an unforgettable experience!
+        </p>
+      </div>
+      <img src="volunteer4.webp" alt="People at KUNE by the ocean" />
+    </section>
+  </article>
+
+  <style>
+    article {
+      background: rgb(197, 152, 222);
+      background: linear-gradient(180deg, rgba(197, 152, 222, 1) 0%, rgba(224, 89, 55, 1) 100%);
+    }
+    .grid_1-1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+    section {
+      margin-bottom: 110px;
+      padding: 30px;
+    }
+  </style>
+</Main>

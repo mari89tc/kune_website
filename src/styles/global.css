@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 /* billeder samt tekst til top af siderne */
 img {
   max-width: 100%;
@@ -47,7 +50,15 @@ p {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 18px;
+  line-height: 32px;
+  color: #ffffff;
+}
+li {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
   line-height: 32px;
   color: #ffffff;
 }
