@@ -26,9 +26,9 @@ import Footer from "../components/Footer.astro";
           <label for="tel"><br />Phone number<br /></label>
           <input id="tel" type="tel" name="Tlf. nummer" />
         </div>
-        <div class="applybutton">
+        <section class="applybutton">
           <Button text="SEND APPLICATION" />
-        </div>
+        </section>
       </form>
     </section>
     <Footer />
@@ -42,6 +42,7 @@ import Footer from "../components/Footer.astro";
 
   article {
     margin-bottom: 110px;
+    padding-top: 60px;
     padding: 30px;
   }
   section {
@@ -83,6 +84,8 @@ import Footer from "../components/Footer.astro";
   }
   .applybutton {
     display: grid;
+    margin-top: 60px;
+    margin-bottom: 250px;
   }
   .applybutton button {
     justify-self: center;
@@ -122,6 +125,11 @@ import Footer from "../components/Footer.astro";
       font-size: 16px;
       line-height: 45px;
       color: #ffffff;
+    }
+    .applybutton {
+      display: grid;
+      margin-top: 60px;
+      margin-bottom: 150px;
     }
   }
 </style>
