@@ -1,6 +1,6 @@
 <article class="foot">
   <section class="grid_1-1">
-    <div>
+    <div class="foot1">
       <h4>Stay Updated</h4>
       <h5 class="subs">Subscribe to our newsletter and stay updated for new information!</h5>
       <form name="footer_sign">
@@ -54,7 +54,7 @@
       </div>
     </div>
 
-    <div>
+    <div class="foot2">
       <img class="logo" src="logo-round-white.png" alt="logo" />
       <div class="grid_1-1-1">
         <div>
@@ -103,8 +103,8 @@
   }
 
   .logo_boks {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    gap: 25px;
     margin-top: 40px;
     margin-bottom: 30px;
   }
@@ -118,20 +118,27 @@
     font-size: 12px;
     border: none;
   }
-  input[type="text"] {
-    background-color: #ffffff;
-  }
   button {
     background-color: #353639;
     font-family: "Montserrat", sans-serif;
     font-style: normal;
-    text-decoration: none;
     font-weight: 500;
     font-size: 12px;
     line-height: 32px;
+    width: 100px;
+    border: solid 4px #353639;
     color: #ffffff;
-    outline: none;
-    margin-top: 30px;
+  }
+  input {
+    border: none;
+    text-decoration: none;
+  }
+  input[type="text"] {
+    border: none;
+    background-color: #ffffff;
+    border: 2px solid #ffffff;
+    width: 250px;
+    padding: 10px;
   }
   .grid_1-1-1 {
     display: grid;
@@ -178,5 +185,62 @@
     font-size: 12px;
     line-height: 20px;
     color: #ffffff;
+  }
+  @media (max-width: 600px) {
+    .grid_1-1 {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    .grid_1 p {
+      font-family: "Montserrat", sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 9px;
+      line-height: 20px;
+      color: #ffffff;
+    }
+    .foot h4 {
+      font-family: "Montserrat", sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 25px;
+      line-height: 35px;
+      color: #ffffff;
+    }
+    .foot h5 {
+      font-family: "Montserrat", sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      color: #ffffff;
+    }
+    .logo_boks {
+      display: flex;
+      gap: 25px;
+      margin-top: 40px;
+      margin-bottom: 30px;
+    }
+    button {
+      background-color: #353639;
+      font-family: "Montserrat", sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 32px;
+      width: 100px;
+      border: solid 4px #353639;
+    }
+    input {
+      border: none;
+      text-decoration: none;
+    }
+    input[type="text"] {
+      border: none;
+      background-color: #ffffff;
+      border: 2px solid #ffffff;
+      width: 250px;
+      padding: 10px;
+    }
   }
 </style>
