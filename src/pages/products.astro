@@ -40,9 +40,9 @@ import Main from "../layouts/Main.astro";
             <div class="card_layout">
               <div class="card2">
                 <img src="../public/Ticket2.jpg" alt="Billede fra festival" />
-                <h3 id="5day">5 DAY</h3>
-                <h4 id="5customize">COSTUMIZE TICKET</h4>
-                <p id="5price">1.000 - 1.500 DKK</p>
+                <h3 id="day5">5 DAY</h3>
+                <h4 id="customize5">COSTUMIZE TICKET</h4>
+                <p id="price5">1.000 - 1.500 DKK</p>
               </div>
             </div></a
           >
@@ -66,7 +66,7 @@ import Main from "../layouts/Main.astro";
 </html>
 
 <style>
-  @media (min-width: 900px) {
+  @media (min-width: 1000px) {
     /* COMPUTER SCREEN LAYOUT */
     /* CONTAINER GRID */
     .ticket_container {
@@ -145,6 +145,17 @@ import Main from "../layouts/Main.astro";
     );
     min-height: 100%;
   }
+  #day5 {
+    padding-bottom: 0rem;
+  }
+  #customize5 {
+    font-size: 15px;
+    padding-bottom: 2rem;
+  }
+  #price5 {
+    font-size: 20px;
+    padding-bottom: 1.5rem;
+  }
 
   /* CARD 3 DESIGN */
   .card3 img {
@@ -162,5 +173,41 @@ import Main from "../layouts/Main.astro";
       rgba(159, 217, 102, 1) 100%
     );
     min-height: 100%;
+  }
+  #weekend {
+    padding-bottom: 0rem;
+  }
+  #wcustomize {
+    font-size: 15px;
+    padding-bottom: 2rem;
+  }
+  #wprice {
+    font-size: 20px;
+    padding-bottom: 1.5rem;
+  }
+  article {
+    background: rgb(197, 152, 222);
+    background: linear-gradient(
+      180deg,
+      rgba(197, 152, 222, 1) 0%,
+      rgba(224, 89, 55, 1) 100%
+    );
+    padding-bottom: 10rem;
+    padding: 5rem 5rem 8rem 5rem;
+  }
+  /* ARTICLE AROUND WHOLE SITE PADDING AND BACKGROUND COLOR - COMPUTER VIEW */
+  @media (min-width: 800) {
+    article {
+      background: rgb(197, 152, 222);
+      background: linear-gradient(
+        180deg,
+        rgba(197, 152, 222, 1) 0%,
+        rgba(224, 89, 55, 1) 100%
+      );
+      padding-bottom: 10rem;
+      padding-top: 10rem;
+
+      padding: 5rem 10rem 13rem 10rem;
+    }
   }
 </style>
