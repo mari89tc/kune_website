@@ -17,33 +17,145 @@ import Main from "../layouts/Main.astro";
   <Main />
   <article>
     <div class="fullpass_container">
-      <img src="../public/Ticket1.jpg" alt="Ticket 1" />
+      <img src="../public/Ticket2.jpg" alt="Ticket 2" />
 
       <div class="fullpass_description">
-        <h3>FULL PASS</h3>
-        <h4>EVERYTHING INCLUDED</h4>
+        <h3 id="fullpass">5 DAY</h3>
+        <h4 id="everything_included">CUSTOMIZE TICKET</h4>
+
+        <p id="description">
+          Participants have access to the festival site. This include boat
+          transport, access to concerts, food and drinks, camping grounds.
+        </p>
+        <p id="alcohol">It is not allowed to bring your own alcohol</p>
+        <div class="customize_box">
+          <p class="customizeticket_p">CUSTOMIZE TICKET</p>
+          <p>BOAT TRANSPORT</p>
+          <p>DORMITORY</p>
+          <p>FOOD AND DRINKS</p>
+          <p>WORKSHOPS AND ACTIVITIES</p>
+        </div>
+        <h4 id="price">1.000 - 1.500 DKK</h4>
+        <a href="/checkout"><button>ADD TO CHART</button></a>
       </div>
     </div>
+
+    <Footer />
+
+    <style>
+      /* MOBILE VIEW */
+      @media (max-width: 900px) {
+        .fullpass_description {
+          text-align: center;
+          padding: 30px;
+        }
+      }
+
+      /* COMPUTER VIEW */
+      @media (min-width: 900px) {
+        .fullpass_container {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 30px;
+        }
+      }
+
+      /* IMAGE LEFT SIDE */
+      img {
+        grid-column: 1;
+      }
+
+      /* DECRIPTION CONTAINER */
+      .fullpass_description {
+        grid-column: 2;
+      }
+
+      /* HEADLINE FULLPASS */
+      #fullpass {
+        font-size: 50px;
+        line-height: 0em;
+      }
+
+      /* SUB HEADLINE */
+      #everything_included {
+        font-size: 15px;
+        padding-bottom: 2rem;
+      }
+
+      /* DESCRIPTION */
+      #description {
+        padding-bottom: 1rem;
+      }
+
+      /* ALCOHOL IN ITALIC */
+      #alcohol {
+        font-style: italic;
+        padding-bottom: 2rem;
+      }
+
+      /* WHITE BOX  */
+      .customize_box {
+        border-width: 3px;
+        border-style: solid;
+        border-color: white;
+      }
+
+      /* WHITE BOX - HEADING */
+      .customizeticket_p {
+        border-bottom: 1px solid;
+        padding-bottom: 10px;
+      }
+
+      /* WHITE BOX + HEADING */
+      .customize_box p {
+        grid-column: 1;
+        display: flex;
+        flex-direction: row;
+        padding-left: 30px;
+      }
+
+      /* PRICE */
+      #price {
+        padding-top: 3rem;
+      }
+
+      button {
+        background-color: rgb(73, 73, 73);
+        color: white;
+        padding: 1rem;
+        font-family: "Montserrat", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+      }
+
+      /* ARTICLE AROUND WHOLE SITE PADDING AND BACKGROUND COLOR - PHONE VIEW */
+      article {
+        background: rgb(197, 152, 222);
+        background: linear-gradient(
+          180deg,
+          rgba(197, 152, 222, 1) 0%,
+          rgba(224, 89, 55, 1) 100%
+        );
+        padding-bottom: 10rem;
+      }
+
+      /* ARTICLE AROUND WHOLE SITE PADDING AND BACKGROUND COLOR - COMPUTER VIEW */
+      @media (min-width: 900px) {
+        article {
+          background: rgb(197, 152, 222);
+          background: linear-gradient(
+            180deg,
+            rgba(197, 152, 222, 1) 0%,
+            rgba(224, 89, 55, 1) 100%
+          );
+          padding-bottom: 10rem;
+          padding-top: 10rem;
+
+          padding: 5rem 10rem 13rem 10rem;
+        }
+      }
+    </style>
   </article>
-
-  <Footer />
-
-  <style>
-    .fullpass_container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 30px;
-    }
-
-    article {
-      background: rgb(197, 152, 222);
-      background: linear-gradient(
-        180deg,
-        rgba(197, 152, 222, 1) 0%,
-        rgba(224, 89, 55, 1) 100%
-      );
-    }
-  </style>
 
 
 </html>

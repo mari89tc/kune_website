@@ -16,9 +16,76 @@ import Main from "../layouts/Main.astro";
   <Nav />
   <Main />
   <article>
-    <div class="checkout.astro"></div>
+    <div class="checkout.astro">
+      <h3 id="basket">BASKET</h3>
+      <div class="customize_box_basket">
+        <p class="customizeticket_basket">FULL PASS</p>
+        <p>WEEKEND</p>
+      </div>
+      <h3 id="payment">PAYMENT</h3>
+      <div class="customize_box_payment">
+        <p class="customizeticket_payment">DANKORT</p>
+        <p>MASTERCARD</p>
+        <p>PAYPAL</p>
+        <p>MOBILEPAY</p>
+      </div>
+    </div>
+    <Footer />
+
+    <style>
+      .checkout.astro {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+      #basket {
+        grid-column: 1;
+      }
+      .customize_box_basket {
+        grid-column: 1;
+        border-width: 3px;
+        border-style: solid;
+        border-color: white;
+      }
+      #payment {
+        grid-column: 2;
+      }
+      .customize_box_payment {
+        grid-column: 2;
+        border-width: 3px;
+        border-style: solid;
+        border-color: white;
+      }
+      p {
+        padding-left: 10px;
+      }
+      article {
+        background: rgb(197, 152, 222);
+        background: linear-gradient(
+          180deg,
+          rgba(197, 152, 222, 1) 0%,
+          rgba(224, 89, 55, 1) 100%
+        );
+        padding-bottom: 10rem;
+        padding: 5rem 5rem 8rem 5rem;
+      }
+
+      /* ARTICLE AROUND WHOLE SITE PADDING AND BACKGROUND COLOR - COMPUTER VIEW */
+      @media (min-width: 900px) {
+        article {
+          background: rgb(197, 152, 222);
+          background: linear-gradient(
+            180deg,
+            rgba(197, 152, 222, 1) 0%,
+            rgba(224, 89, 55, 1) 100%
+          );
+          padding-bottom: 10rem;
+          padding-top: 10rem;
+
+          padding: 5rem 10rem 13rem 10rem;
+        }
+      }
+    </style>
   </article>
-  <Footer />
 
 
 </html>

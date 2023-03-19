@@ -18,7 +18,7 @@ import Main from "../layouts/Main.astro";
     <Nav />
     <Main>
       <!-- MAIN PAGE - FRONT IMAGE -->
-      <Hero>
+      <Hero slot="header-slot">
         <img src="../public/Ticketindex.jpg" alt="ticket picture" />
         <h2>TICKETS</h2>
       </Hero>
@@ -29,9 +29,9 @@ import Main from "../layouts/Main.astro";
             <div class="card_layout">
               <div class="card1">
                 <img src="../public/Ticket1.jpg" alt="Billede fra festival" />
-                <h3>FULL PASS</h3>
-                <h4>EVERTHING INCLUDED</h4>
-                <p>1.500 DKK</p>
+                <h3 id="fullpass">FULL PASS</h3>
+                <h4 id="everythingincluded">EVERTHING INCLUDED</h4>
+                <p id="price">1.500 DKK</p>
               </div>
             </div></a
           >
@@ -40,9 +40,9 @@ import Main from "../layouts/Main.astro";
             <div class="card_layout">
               <div class="card2">
                 <img src="../public/Ticket2.jpg" alt="Billede fra festival" />
-                <h3>5 DAY</h3>
-                <h4>COSTUMIZE TICKET</h4>
-                <p>1.000 - 1.500 DKK</p>
+                <h3 id="day5">5 DAY</h3>
+                <h4 id="customize5">COSTUMIZE TICKET</h4>
+                <p id="price5">1.000 - 1.500 DKK</p>
               </div>
             </div></a
           >
@@ -51,9 +51,9 @@ import Main from "../layouts/Main.astro";
             <div class="card_layout">
               <div class="card2">
                 <img src="../public/Ticket3.jpg" alt="Billede fra festival" />
-                <h3>WEEKEND</h3>
-                <h4>CUSTOMIZE TICKET</h4>
-                <p>900 - 1.200 DKK</p>
+                <h3 id="weekend">WEEKEND</h3>
+                <h4 id="wcustomize">CUSTOMIZE TICKET</h4>
+                <p id="wprice">900 - 1.200 DKK</p>
               </div>
             </div></a
           >
@@ -66,7 +66,7 @@ import Main from "../layouts/Main.astro";
 </html>
 
 <style>
-  @media (min-width: 900px) {
+  @media (min-width: 1000px) {
     /* COMPUTER SCREEN LAYOUT */
     /* CONTAINER GRID */
     .ticket_container {
@@ -86,6 +86,8 @@ import Main from "../layouts/Main.astro";
       rgba(197, 152, 222, 1) 0%,
       rgba(224, 89, 55, 1) 100%
     );
+    padding-top: 10rem;
+    padding-bottom: 10rem;
   }
   /* GENERAL CARD EDITS */
   .card_layout {
@@ -114,6 +116,17 @@ import Main from "../layouts/Main.astro";
     );
     min-height: 100%;
   }
+  #fullpass {
+    padding-bottom: 0rem;
+  }
+  #everythingincluded {
+    font-size: 15px;
+    padding-bottom: 2rem;
+  }
+  #price {
+    font-size: 20px;
+    padding-bottom: 1.5rem;
+  }
 
   /* CARD 2 DESIGN */
   .card2 img {
@@ -132,6 +145,17 @@ import Main from "../layouts/Main.astro";
     );
     min-height: 100%;
   }
+  #day5 {
+    padding-bottom: 0rem;
+  }
+  #customize5 {
+    font-size: 15px;
+    padding-bottom: 2rem;
+  }
+  #price5 {
+    font-size: 20px;
+    padding-bottom: 1.5rem;
+  }
 
   /* CARD 3 DESIGN */
   .card3 img {
@@ -149,5 +173,41 @@ import Main from "../layouts/Main.astro";
       rgba(159, 217, 102, 1) 100%
     );
     min-height: 100%;
+  }
+  #weekend {
+    padding-bottom: 0rem;
+  }
+  #wcustomize {
+    font-size: 15px;
+    padding-bottom: 2rem;
+  }
+  #wprice {
+    font-size: 20px;
+    padding-bottom: 1.5rem;
+  }
+  article {
+    background: rgb(197, 152, 222);
+    background: linear-gradient(
+      180deg,
+      rgba(197, 152, 222, 1) 0%,
+      rgba(224, 89, 55, 1) 100%
+    );
+    padding-bottom: 10rem;
+    padding: 5rem 5rem 8rem 5rem;
+  }
+  /* ARTICLE AROUND WHOLE SITE PADDING AND BACKGROUND COLOR - COMPUTER VIEW */
+  @media (min-width: 800) {
+    article {
+      background: rgb(197, 152, 222);
+      background: linear-gradient(
+        180deg,
+        rgba(197, 152, 222, 1) 0%,
+        rgba(224, 89, 55, 1) 100%
+      );
+      padding-bottom: 10rem;
+      padding-top: 10rem;
+
+      padding: 5rem 10rem 13rem 10rem;
+    }
   }
 </style>
