@@ -1,13 +1,13 @@
 ---
-const text = Astro.props.text;
+const { text, href = "/" } = Astro.props;
 ---
 
-<button>
+<a href={href}>
   <p>{text}</p>
-</button>
+</a>
 
 <style>
-  button {
+  a {
     background-color: #353639;
     text-decoration: none;
     outline: none;
@@ -15,15 +15,16 @@ const text = Astro.props.text;
     width: 250px;
     border: none;
   }
-  button p {
+  a p {
     font-family: "Montserrat", sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 32px;
     color: #ffffff;
+    text-align: center;
   }
-  button:hover {
+  a:hover {
     background-color: #ffffff;
     text-decoration: none;
     outline: none;
@@ -31,7 +32,7 @@ const text = Astro.props.text;
     width: 250px;
     border: none;
   }
-  button:hover p {
+  a:hover p {
     font-family: "Montserrat", sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -39,7 +40,7 @@ const text = Astro.props.text;
     line-height: 32px;
     color: #353639;
   }
-  button:active {
+  a:active {
     background-color: #ffffff;
     text-decoration: none;
     outline: none;
@@ -47,7 +48,7 @@ const text = Astro.props.text;
     width: 250px;
     border: none;
   }
-  button:active p {
+  a:active p {
     font-family: "Montserrat", sans-serif;
     font-style: normal;
     font-weight: 500;
