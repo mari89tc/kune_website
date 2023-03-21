@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
+import Hero from "../components/Hero.astro";
 import Main from "../layouts/Main.astro";
 ---
 
@@ -14,7 +15,8 @@ import Main from "../layouts/Main.astro";
     <title>FULL PASS</title>
   </head>
   <Nav />
-  <Main />
+  <Main type="standard" />
+
   <article>
     <div class="fullpass_container">
       <img src="../public/Ticket1.jpg" alt="Ticket 1" />
@@ -136,23 +138,11 @@ import Main from "../layouts/Main.astro";
 
       /* ARTICLE AROUND WHOLE SITE PADDING AND BACKGROUND COLOR - PHONE VIEW */
       article {
-        background: rgb(197, 152, 222);
-        background: linear-gradient(
-          180deg,
-          rgba(197, 152, 222, 1) 0%,
-          rgba(224, 89, 55, 1) 100%
-        );
       }
 
       /* ARTICLE AROUND WHOLE SITE PADDING AND BACKGROUND COLOR - COMPUTER VIEW */
       @media (min-width: 900px) {
         article {
-          background: rgb(197, 152, 222);
-          background: linear-gradient(
-            180deg,
-            rgba(197, 152, 222, 1) 0%,
-            rgba(224, 89, 55, 1) 100%
-          );
           padding-bottom: 10rem;
           padding-top: 10rem;
 
