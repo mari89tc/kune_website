@@ -32,8 +32,10 @@ import Main from "../layouts/Main.astro";
         <p id="alcohol">It is not allowed to bring your own alcohol</p>
         <div class="customize_box">
           <p class="customizeticket_p">CUSTOMIZE TICKET</p>
-          <p>CAMPING SPOT</p>
-          <p>DORMITORY</p>
+
+          <p>
+            <label>DORMITORY <input type="checkbox" name="" id="" /></label>
+          </p>
         </div>
         <h4 id="price">1.500 DKK</h4>
         <a href="/checkout"><button>ADD TO CHART</button></a>
@@ -120,12 +122,16 @@ import Main from "../layouts/Main.astro";
       }
 
       button {
-        background-color: rgb(73, 73, 73);
+        background-color: #353639;
         color: white;
         padding: 1rem;
         font-family: "Montserrat", sans-serif;
         font-style: normal;
         font-weight: 700;
+      }
+      button:hover {
+        background-color: white;
+        color: #353639;
       }
 
       /* ARTICLE AROUND WHOLE SITE PADDING AND BACKGROUND COLOR - PHONE VIEW */
@@ -136,7 +142,6 @@ import Main from "../layouts/Main.astro";
           rgba(197, 152, 222, 1) 0%,
           rgba(224, 89, 55, 1) 100%
         );
-        padding-bottom: 10rem;
       }
 
       /* ARTICLE AROUND WHOLE SITE PADDING AND BACKGROUND COLOR - COMPUTER VIEW */
