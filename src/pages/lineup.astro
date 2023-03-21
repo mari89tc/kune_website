@@ -42,6 +42,10 @@ console.log(wednesday);
     <h3>her er en h3</h3>
     <section class="grid_1-1-1"></section>
     <Lineup />
+    <section class="map">
+      <h3>GET TO KNOW KUNE FESTIVAL</h3>
+      <img src="kort.svg" alt="map over festival" />
+    </section>
     <Footer />
   </article>
 </Main>
@@ -60,5 +64,25 @@ console.log(wednesday);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 10px;
+  }
+  .map {
+    display: grid;
+    margin-bottom: 150px;
+  }
+  .map img {
+    justify-self: center;
+    align-self: center;
+  }
+  .map h3 {
+    justify-self: center;
+    align-self: center;
+  }
+  .map img {
+    width: 40%;
+  }
+  @media (max-width: 600px) {
+    .map img {
+      width: 80%;
+    }
   }
 </style>
