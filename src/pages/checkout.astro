@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
+import Hero from "../components/Hero.astro";
 import Main from "../layouts/Main.astro";
 ---
 
@@ -14,77 +15,168 @@ import Main from "../layouts/Main.astro";
     <title>CHECK OUT</title>
   </head>
   <Nav />
-  <Main />
+  <Main type="standard" />
+
   <article>
     <div class="checkout.astro">
       <h3 id="basket">BASKET</h3>
       <div class="customize_box_basket">
-        <p class="customizeticket_basket">FULL PASS</p>
-        <p>WEEKEND</p>
+        <div class="order_1">
+          <img
+            src="../public/Ticket1.jpg"
+            alt="Ticket 1"
+            width="110px"
+            height="90px"
+          />
+          <div class="name_price">
+            <p>FULL PASS</p>
+          </div>
+        </div>
+
+        <div class="order_2">
+          <img
+            src="../public/Ticket2.jpg"
+            alt="Ticket 2"
+            width="110px"
+            height="90px"
+          />
+          <div class="name_price">
+            <p>WEEKEND</p>
+          </div>
+        </div>
       </div>
       <h3 id="payment">PAYMENT</h3>
       <div class="customize_box_payment">
-        <p class="customizeticket_payment">DANKORT</p>
-        <p>MASTERCARD</p>
-        <p>PAYPAL</p>
-        <p>MOBILEPAY</p>
+        <p id="dankort">
+          <label>DANKORT <input type="checkbox" name="" id="" /></label>
+        </p>
+        <p id="mastercard">
+          <label>MASTERCARD <input type="checkbox" name="" id="" /></label>
+        </p>
+        <p id="paypal">
+          <label>PAYPAL <input type="checkbox" name="" id="" /></label>
+        </p>
+        <p id="mobilepay">
+          <label>MOBILEPAY <input type="checkbox" name="" id="" /></label>
+        </p>
       </div>
-    </div>
-    <Footer />
+      <h4 id="price">2.500 DKK</h4>
+      <p class="buttonwrapper">
+        <a href="/checkout"><button>CHECKOUT</button></a>
+      </p>
+      <Footer />
 
-    <style>
-      .checkout.astro {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-      }
-      #basket {
-        grid-column: 1;
-      }
-      .customize_box_basket {
-        grid-column: 1;
-        border-width: 3px;
-        border-style: solid;
-        border-color: white;
-      }
-      #payment {
-        grid-column: 2;
-      }
-      .customize_box_payment {
-        grid-column: 2;
-        border-width: 3px;
-        border-style: solid;
-        border-color: white;
-      }
-      p {
-        padding-left: 10px;
-      }
-      article {
-        background: rgb(197, 152, 222);
-        background: linear-gradient(
-          180deg,
-          rgba(197, 152, 222, 1) 0%,
-          rgba(224, 89, 55, 1) 100%
-        );
-        padding-bottom: 10rem;
-        padding: 5rem 5rem 8rem 5rem;
-      }
-
-      /* ARTICLE AROUND WHOLE SITE PADDING AND BACKGROUND COLOR - COMPUTER VIEW */
-      @media (min-width: 900px) {
-        article {
-          background: rgb(197, 152, 222);
-          background: linear-gradient(
-            180deg,
-            rgba(197, 152, 222, 1) 0%,
-            rgba(224, 89, 55, 1) 100%
-          );
-          padding-bottom: 10rem;
-          padding-top: 10rem;
-
-          padding: 5rem 10rem 13rem 10rem;
+      <style>
+        /* GRID CONTAINER */
+        .checkout.astro {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
         }
-      }
-    </style>
+
+        /* BASKET HEADLINE */
+        #basket {
+          grid-column: 1;
+        }
+
+        /* WHITE BOX - BASKET */
+        .customize_box_basket {
+          grid-column: 1;
+          border-width: 3px;
+          border-style: solid;
+          border-color: white;
+        }
+
+        /* PAYMENT HEADLINE */
+        #payment {
+          grid-column: 2;
+        }
+        .customize_box_payment {
+          grid-column: 2;
+          border-width: 3px;
+          border-style: solid;
+          border-color: white;
+        }
+        h3 {
+          display: flex;
+          justify-content: center;
+        }
+        h4 {
+          display: flex;
+          justify-content: center;
+          padding-top: 3rem;
+        }
+        p {
+          padding-left: 10px;
+        }
+        img {
+          padding: 5px;
+        }
+        .order_1 {
+          display: flex;
+          flex-direction: row;
+          padding-bottom: 5px;
+          border-bottom: 1px solid;
+          border-color: white;
+        }
+        .name_price {
+          display: flex;
+          justify-content: space-between;
+        }
+        .order_2 {
+          display: flex;
+          flex-direction: row;
+        }
+        #dankort {
+          border-bottom: 1px solid;
+          border-color: white;
+          padding-bottom: 10px;
+        }
+        #mastercard {
+          border-bottom: 1px solid;
+          border-color: white;
+          padding-bottom: 10px;
+        }
+        #paypal {
+          border-bottom: 1px solid;
+          border-color: white;
+          padding-bottom: 10px;
+        }
+        #mobilepay {
+        }
+        .buttonwrapper {
+          display: flex;
+          justify-content: center;
+        }
+        button {
+          text-decoration: none;
+          background-color: #353639;
+          color: white;
+          padding: 1rem;
+
+          font-family: "Montserrat", sans-serif;
+          font-style: normal;
+          font-weight: 700;
+        }
+        button:hover {
+          background-color: white;
+          color: #353639;
+        }
+        article {
+          padding-bottom: 10rem;
+          padding: 5rem 5rem 8rem 5rem;
+        }
+
+        /* ARTICLE AROUND WHOLE SITE PADDING AND BACKGROUND COLOR - COMPUTER VIEW */
+        @media (min-width: 900px) {
+          article {
+            padding-bottom: 10rem;
+            padding-top: 10rem;
+
+            padding: 5rem 10rem 13rem 10rem;
+          }
+        }
+      </style>
+    </div>
   </article>
 
 

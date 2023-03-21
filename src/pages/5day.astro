@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
+import Hero from "../components/Hero.astro";
 import Main from "../layouts/Main.astro";
 ---
 
@@ -14,7 +15,8 @@ import Main from "../layouts/Main.astro";
     <title>FULL PASS</title>
   </head>
   <Nav />
-  <Main />
+  <Main type="standard" />
+
   <article>
     <div class="fullpass_container">
       <img src="../public/Ticket2.jpg" alt="Ticket 2" />
@@ -24,16 +26,32 @@ import Main from "../layouts/Main.astro";
         <h4 id="everything_included">CUSTOMIZE TICKET</h4>
 
         <p id="description">
-          Participants have access to the festival site. This include boat
-          transport, access to concerts, food and drinks, camping grounds.
+          This ticket includes a 5 day acces to the festival. A camping spot
+          will be asigned to you, if you dont choose to stay ay our dormitory.
+          By customizing the ticket, you have the option to choose what you
+          need. The price will depend on your choices.
         </p>
         <p id="alcohol">It is not allowed to bring your own alcohol</p>
         <div class="customize_box">
           <p class="customizeticket_p">CUSTOMIZE TICKET</p>
-          <p>BOAT TRANSPORT</p>
-          <p>DORMITORY</p>
-          <p>FOOD AND DRINKS</p>
-          <p>WORKSHOPS AND ACTIVITIES</p>
+          <p>
+            <label
+              >BOAT TRANSPORT <input type="checkbox" name="" id="" />
+            </label>
+          </p>
+          <p>
+            <label>DORMITORY <input type="checkbox" name="" id="" /></label>
+          </p>
+          <p>
+            <label
+              >FOOD AND DRINKS <input type="checkbox" name="" id="" />
+            </label>
+          </p>
+          <p>
+            <label
+              >WORKSHOPS AND ACTIVITIES <input type="checkbox" name="" id="" />
+            </label>
+          </p>
         </div>
         <h4 id="price">1.000 - 1.500 DKK</h4>
         <a href="/checkout"><button>ADD TO CHART</button></a>
@@ -102,12 +120,13 @@ import Main from "../layouts/Main.astro";
 
       /* WHITE BOX - HEADING */
       .customizeticket_p {
+        padding-left: 30px;
         border-bottom: 1px solid;
         padding-bottom: 10px;
       }
 
       /* WHITE BOX + HEADING */
-      .customize_box p {
+      .customize_box label {
         grid-column: 1;
         display: flex;
         flex-direction: row;
@@ -120,38 +139,29 @@ import Main from "../layouts/Main.astro";
       }
 
       button {
-        background-color: rgb(73, 73, 73);
+        background-color: #353639;
         color: white;
         padding: 1rem;
         font-family: "Montserrat", sans-serif;
         font-style: normal;
         font-weight: 700;
       }
+      button:hover {
+        background-color: white;
+        color: #353639;
+      }
 
       /* ARTICLE AROUND WHOLE SITE PADDING AND BACKGROUND COLOR - PHONE VIEW */
       article {
-        background: rgb(197, 152, 222);
-        background: linear-gradient(
-          180deg,
-          rgba(197, 152, 222, 1) 0%,
-          rgba(224, 89, 55, 1) 100%
-        );
-        padding-bottom: 10rem;
       }
 
       /* ARTICLE AROUND WHOLE SITE PADDING AND BACKGROUND COLOR - COMPUTER VIEW */
       @media (min-width: 900px) {
         article {
-          background: rgb(197, 152, 222);
-          background: linear-gradient(
-            180deg,
-            rgba(197, 152, 222, 1) 0%,
-            rgba(224, 89, 55, 1) 100%
-          );
           padding-bottom: 10rem;
           padding-top: 10rem;
 
-          padding: 5rem 10rem 13rem 10rem;
+          padding: 5rem 10rem 0rem 10rem;
         }
       }
     </style>
