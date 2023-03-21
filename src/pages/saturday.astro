@@ -30,12 +30,14 @@ function sortActs(a, b) {
 }
 data.sort(sortActs);
 
-const wednesday = data.filter((act) => act.day === "2022-07-20");
-const wednesdaySpace = wednesday.filter((act) => act.scene === "space stage");
-const wednesdayVessel = wednesday.filter((act) => act.scene === "vessel stage");
-const wednesdayAstral = wednesday.filter((act) => act.scene === "astral stage");
+const saturday = data.filter((act) => act.day === "2022-07-23");
+const saturdaySpace = saturday.filter((act) => act.scene === "space stage");
+const saturdayVessel = saturday.filter((act) => act.scene === "vessel stage");
+const saturdayAstral = saturday.filter((act) => act.scene === "astral stage");
+const saturdayBeach = saturday.filter((act) => act.scene === "beach stage");
+const saturdayAmphi = saturday.filter((act) => act.scene === "amphi stage");
 
-console.log(wednesdaySpace);
+console.log(saturdaySpace);
 ---
 
 <Main>
@@ -52,12 +54,14 @@ console.log(wednesdaySpace);
       <Button text="SATURDAY" />
     </div>
     <div class="headh3">
-      <h3>WEDNESDAY - JULY 20</h3>
+      <h3>SATURDAY - JULY 23</h3>
     </div>
     <section class="grid_1-1-1">
-      <Stage name="Space Stage" host="VJ:PM" acts={wednesdaySpace} />
-      <Stage name="Vessel Stage" host="VJ:DOGON" acts={wednesdayVessel} />
-      <Stage name="Astral Stage" host="VJ:KRISTIAN NIHLEN" acts={wednesdayAstral} />
+      <Stage name="Space Stage" host="VJ:AURAL EYE" acts={saturdaySpace} />
+      <Stage name="Vessel Stage" host="VJ:AB/DX" acts={saturdayVessel} />
+      <Stage name="Astral Stage" host="VJ:SPHERICAL ABERRATION" acts={saturdayAstral} />
+      <Stage name="Beach Stage" acts={saturdayBeach} />
+      <Stage name="Amphi Stage" acts={saturdayAmphi} />
     </section>
     <Lineup />
     <section class="map">

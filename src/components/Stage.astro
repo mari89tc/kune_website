@@ -3,7 +3,7 @@ const { name, host, acts } = Astro.props;
 ---
 
 <section>
-  <h2>{name}</h2>
+  <h3>{name}</h3>
   <p>{host}</p>
   <div class="grid">
     {
@@ -18,3 +18,65 @@ const { name, host, acts } = Astro.props;
     }
   </div>
 </section>
+<style>
+  section {
+    border: 1px solid #ffffff;
+    padding: 20px;
+  }
+  section h3 {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 10px;
+    color: black;
+  }
+  section p {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 15px;
+    color: black;
+  }
+  .grid {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 35px;
+    color: black;
+    text-transform: uppercase;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+  }
+  @media (max-width: 600px) {
+    section h3 {
+      font-family: "Montserrat", sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 25px;
+      line-height: 10px;
+      color: black;
+    }
+    section p {
+      font-family: "Montserrat", sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 15px;
+      color: black;
+    }
+    .grid {
+      font-family: "Montserrat", sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 35px;
+      color: black;
+      text-transform: uppercase;
+      display: grid;
+      grid-template-columns: 120px 300px;
+    }
+  }
+</style>

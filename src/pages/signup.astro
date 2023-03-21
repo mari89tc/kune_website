@@ -3,6 +3,7 @@ import Hero from "../components/Hero.astro";
 import Main from "../layouts/Main.astro";
 import Button from "../components/Button.astro";
 import Footer from "../components/Footer.astro";
+import Buyticket from "../components/Buyticket.astro";
 ---
 
 <Main>
@@ -11,9 +12,10 @@ import Footer from "../components/Footer.astro";
     <h2>VOLUNTEER</h2>
   </Hero>
   <article>
+    <Buyticket />
     <section>
       <h3>Join KUNE Festival team here</h3>
-      <form name="kontakt">
+      <form class="forms" name="kontakt">
         <div>
           <label for="navn"><br />Full Name<br /></label>
           <input id="navn" type="text" name="fname" />
@@ -25,6 +27,9 @@ import Footer from "../components/Footer.astro";
         <div>
           <label for="tel"><br />Phone number<br /></label>
           <input id="tel" type="tel" name="Tlf. nummer" />
+        </div>
+        <div class="attach">
+          <a href="mailto:contact@kunekbh.com">Attach application here</a>
         </div>
         <section class="applybutton">
           <Button text="SEND APPLICATION" />
@@ -52,13 +57,13 @@ import Footer from "../components/Footer.astro";
     justify-self: center;
     align-self: center;
   }
-  form {
-    padding: 30px;
-    padding-left: 200px;
+  section form {
+    justify-self: center;
+    align-self: center;
   }
 
   input {
-    width: 70%;
+    width: 550px;
     padding: 20px;
     background-color: #e05937;
     text-decoration: none;
@@ -66,7 +71,7 @@ import Footer from "../components/Footer.astro";
     border: none;
   }
   input:focus {
-    width: 70%;
+    width: 550px;
     padding: 20px;
     background-color: #e05937;
     text-decoration: none;
@@ -81,6 +86,18 @@ import Footer from "../components/Footer.astro";
     font-size: 18px;
     line-height: 45px;
     color: #ffffff;
+  }
+  .attach {
+    margin-top: 45px;
+  }
+  .attach a {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 50px;
+    color: #ffffff;
+    text-decoration: underline;
   }
   .applybutton {
     display: grid;
@@ -102,7 +119,7 @@ import Footer from "../components/Footer.astro";
       padding: 30px;
     }
     input {
-      width: 100%;
+      width: 300px;
       padding: 20px;
       background-color: #e05937;
       text-decoration: none;
@@ -110,7 +127,7 @@ import Footer from "../components/Footer.astro";
       border: none;
     }
     input:focus {
-      width: 50%;
+      width: 300px;
       padding: 20px;
       background-color: #e05937;
       text-decoration: none;
@@ -130,6 +147,15 @@ import Footer from "../components/Footer.astro";
       display: grid;
       margin-top: 60px;
       margin-bottom: 150px;
+    }
+    .attach a {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 50px;
+      color: #ffffff;
+      text-decoration: underline;
     }
   }
 </style>
