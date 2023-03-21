@@ -33,8 +33,7 @@ import Nav from "../components/Nav.astro";
     <LinkButton href="#header_transport_us" text="TRANSPORT" />
     <LinkButton href="#header_loca_us" text="LOCATION" />
   </div>
-  </article>
-  <article>
+
     <section class="grid_1-1 order1" id="header_about_us">
       <div>
         <h3>ABOUT US</h3>
@@ -110,10 +109,12 @@ See you all soon! Don’t hesitate to contact us with any additional questions f
     background: linear-gradient(180deg, rgba(197, 152, 222, 1) 0%, rgba(224, 89, 55, 1) 50%, rgba(159, 217, 102, 1) 100%);
     min-height: 100%;
   }
-  .grid_1-1-1-1-1{
+  .grid_1-1-1-1-1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 10px;
+    text-align: center;
+    justify-items: center;
   }
   .grid_1-1 {
     display: grid;
