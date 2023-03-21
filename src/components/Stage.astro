@@ -1,0 +1,20 @@
+---
+const { name, host, acts } = Astro.props;
+---
+
+<section>
+  <h2>{name}</h2>
+  <p>{host}</p>
+  <div class="grid">
+    {
+      acts.map((act) => {
+        return (
+          <>
+            <span>{act.time}</span>
+            <span>{act.name}</span>
+          </>
+        );
+      })
+    }
+  </div>
+</section>

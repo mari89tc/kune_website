@@ -2,7 +2,9 @@
 import Button from "../components/Button.astro";
 import Footer from "../components/Footer.astro";
 import Hero from "../components/Hero.astro";
+import Stage from "../components/Stage.astro";
 import Main from "../layouts/Main.astro";
+
 import Lineup from "../components/Lineup.astro";
 
 const data = await fetch("https://zdmoxayivfdeyvmosdlh.supabase.co/rest/v1/kune_lineup", {
@@ -23,8 +25,16 @@ const data = await fetch("https://zdmoxayivfdeyvmosdlh.supabase.co/rest/v1/kune_
   }
 
 */
+function sortActs(a, b) {
+  return a.number - b.number;
+}
+data.sort(sortActs);
+
 const wednesday = data.filter((act) => act.day === "2022-07-20");
-console.log(wednesday);
+const wednesdaySpace = wednesday.filter((act) => act.scene === "space stage");
+const wednesdayVessel = wednesday.filter((act) => act.scene === "vessel stage");
+
+console.log(wednesdaySpace);
 ---
 
 <Main>
@@ -40,7 +50,10 @@ console.log(wednesday);
       <Button text="SATURDAY" />
     </div>
     <h3>her er en h3</h3>
-    <section class="grid_1-1-1"></section>
+    <section class="grid_1-1-1">
+      <Stage name="Space Stage" host="VJ:PM" acts={wednesdaySpace} />
+      <Stage name="Vessel Stage" host="VJ:DOGON" acts={wednesdayVessel} />
+    </section>
     <Lineup />
     <section class="map">
       <h3>GET TO KNOW KUNE FESTIVAL</h3>
