@@ -4,6 +4,27 @@ import Footer from "../components/Footer.astro";
 import Hero from "../components/Hero.astro";
 import Main from "../layouts/Main.astro";
 import Lineup from "../components/Lineup.astro";
+
+const data = await fetch("https://zdmoxayivfdeyvmosdlh.supabase.co/rest/v1/kune_lineup", {
+  method: "GET",
+  headers: { apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpkbW94YXlpdmZkZXl2bW9zZGxoIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg5NzMwNDEsImV4cCI6MTk5NDU0OTA0MX0.AEn38sQFVJLclEVL5V1IgByV_qt5qvKs0r9GFE8dJ7Y" },
+}).then((res) => res.json());
+
+//console.log(data);
+/*
+{
+    id: 88,
+    created_at: '2023-03-17T12:22:38.08356+00:00',
+    time: '22:00:00',
+    name: 'bobo live',
+    day: '2022-07-23',
+    scene: 'amphi stage',
+    number: '3'
+  }
+
+*/
+const wednesday = data.filter((act) => act.day === "2022-07-20");
+console.log(wednesday);
 ---
 
 <Main>
