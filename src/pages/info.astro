@@ -1,0 +1,161 @@
+---
+import Button from "../components/Button.astro";
+import Footer from "../components/Footer.astro";
+import Hero from "../components/Hero.astro";
+import Main from "../layouts/Main.astro";
+import "../styles/global.css";
+import Nav from "../components/Nav.astro";
+import Buyticket from "../components/Buyticket.astro";
+import Linkbut from "../components/Linkbut.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Info</title>
+  </head>
+  <body>
+    <Nav />
+    <!-- MAIN PAGE  -->
+    <Main>
+      <Hero slot="header-slot">
+        <img src="infoforside.webp" alt="Man who is cheking the music" />
+        <h2>INFO</h2>
+      </Hero>
+      <article>
+        <Buyticket />
+        <div class="grid_1-1-1-1-1">
+          <Linkbut href="#header_about_us" text="ABOUT US" />
+          <Linkbut href="#header_food_us" text="FOOD" />
+          <Linkbut href="#header_rules_us" text="RULES" />
+          <Linkbut href="#header_transport_us" text="TRANSPORT" />
+          <Linkbut href="#header_loca_us" text="LOCATION" />
+        </div>
+
+        <section class="grid_1-1 order1" id="header_about_us">
+          <div>
+            <h3>ABOUT US</h3>
+            <p>
+              We strive to build an environment that values and celebrates what we call the ‘Otherness’ of the world. The Otherness is a concept that acknowledges the existence of people who may be similar to us in many ways yet possess traits,
+              values, and characteristics that set them apart as “other.” Humans share a great deal in common, but we are also remarkably diverse regarding cultural or social norms, habits, or behavior. The Otherness element recognizes this diversity
+              and encourages us to acknowledge, appreciate, and celebrate our differences. By embracing the Otherness, we create a more inclusive, compassionate, and open-minded world. Rather than viewing differences as a source of conflict or
+              division, we recognize them as a source of strength and beauty.
+            </p>
+          </div>
+          <img src="about4.webp" alt="people talking" />
+        </section>
+        <section class="grid_1-1 order2" id="header_food_us">
+          <img src="about1.webp" alt="People painting" />
+          <div>
+            <h3>FOOD</h3>
+            <p>Breakfast, Lunch & Snacks are available to get at the entrance booth everyday of the festival.</p>
+            <ul>
+              <li>Breakfast: Every morning breakfest will be available to buy from 07:00 to 10.00, afterwards there will be snacks you can buy till Lunch.</li>
+              <li>Lunch: You will be avaible to buy lunch from 11.00 to 14.00, at every food stand aswell as drinks, snacks and other necessities.</li>
+              <li>Dinner: Every evening of the day we are serving dinner starting 17:00 to 21:00 - can be paid at the entrance booth and picked up from the kitchen (inside, on the way to the dormitories).</li>
+              <li>Starting 22:00 to 2:00 - empanadas will be available at the Garden Bar.</li>
+              <li>From 02:00 - 09:00 a small selection of snacks and fruits will be available for sale at the entrance booth</li>
+            </ul>
+          </div>
+        </section>
+        <section class="grid_1-1 order1" id="header_rules_us">
+          <div>
+            <h3>RULES</h3>
+            <p>
+              We want to highlight the importance of taking good care of ourselves, each other, and our surroundings. Please, do not run on stone formations or the stones around the water edge. Stay within the barriers, respect restricted areas, and
+              always bring someone with you if you go out on the pier. We always clean up after ourselves on the island – waste must be stored in rubbish bins and never dug down, buried, or discarded in nature. KUNE will provide pocket ashtrays for
+              cigarette butts and trash bags for sorting out camp trash. Please be mindful of our no-trace policy and keep our surroundings clean. Take care of your tent and your belongings. Neither KUNE nor Ungdomsøen have any responsibility for
+              lost, stolen or broken things. Respect the marked restricted areas inside the fort. Fire is not allowed on the camping site, under no circumstance, with the exception of camping stoves that can be used EXCLUSIVELY in one of the two
+              outdoor kitchen areas. Using candles, bat lanterns, torches, or the like and opening fire indoors is forbidden.
+            </p>
+          </div>
+          <img src="about2.webp" alt="Art that hings" />
+        </section>
+        <section class="grid_1-1 order2" id="header_transport_us">
+          <img src="about6.webp" alt="People hugging and dacing" />
+          <div>
+            <h3>TRANSPORT</h3>
+            <p>
+              Please note that tickets for transportation are sold on a first-come-first-served basis. You need to book your tickets as soon as possible to make sure you can travel at your preferred time and date to and from the festival. You can, of
+              course, sail to Ungdomsøen with your own boat. However, please remember that a 100 dkk docking fee must be paid on the spot. Depending on the weather, there is also a limited capacity of approximately 40 boats in the harbour. See you
+              all soon! Don’t hesitate to contact us with any additional questions for practical information or concerns.
+            </p>
+          </div>
+        </section>
+        <section class="grid_1-1 order1" id="header_loca_us">
+          <div>
+            <h3>LOCATION</h3>
+            <p>
+              Ungdomsøen (Youth Island) is a historic youth project donated to the Danish Scout movement by The A.P. Møller Foundation and the Nordea Foundation in 2015. Originally a sea fortress built in 1894, the area is now a place where youth
+              culture and creativity thrive. It aims to strengthen and unite young people in their journey of becoming active, committed and curious citizens taking responsibility for their communities and the development of society. Located in the
+              middle of Øresund, the island is just a quick ferry ride away from the centre of Copenhagen. It spreads over 50.000 m2. There are more than 16.500 m2 and 2.5 km of pathways inside the island. Take care of the island Since the island is
+              on an old seafront, there are a few things we would like to ask you to adhere to. That concerns your own safety and the safety of others, as well as the preservation of the island. We want to keep it clean and follow the goals of
+              sustainability.
+            </p>
+          </div>
+          <img src="about3.webp" alt="People on the island" />
+        </section>
+
+        <Footer />
+      </article>
+    </Main>
+    <!-- STYLE  -->
+    <style>
+      article {
+        background: rgb(197, 152, 222);
+        background: linear-gradient(180deg, rgba(197, 152, 222, 1) 0%, rgba(224, 89, 55, 1) 50%, rgba(159, 217, 102, 1) 100%);
+        min-height: 100%;
+      }
+      .grid_1-1-1-1-1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        gap: 10px;
+        text-align: center;
+        justify-items: center;
+      }
+      .grid_1-1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+      }
+      section {
+        margin-bottom: 110px;
+        padding: 30px;
+      }
+      .aboutus {
+        display: grid;
+      }
+      .aboutus button {
+        place-self: ;
+        justify-self: ;
+      }
+      .food {
+        display: grid;
+      }
+      .food button {
+        place-self: ;
+        justify-self: ;
+      }
+      @media (max-width: 600px) {
+        .grid_1-1 {
+          display: grid;
+          grid-template-columns: 1fr;
+        }
+
+        section {
+          margin-bottom: 110px;
+          padding: 30px;
+        }
+        .order1 img {
+          order: -1;
+        }
+        .order2 {
+          order: -1;
+        }
+      }
+    </style>
+  </body>
+</html>
