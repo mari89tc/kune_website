@@ -1,5 +1,6 @@
 ---
 import Button from "../components/Button.astro";
+import LinkButton from "../components/LinkButton.astro";
 import Footer from "../components/Footer.astro";
 import Hero from "../components/Hero.astro";
 import Main from "../layouts/Main.astro";
@@ -26,15 +27,15 @@ import Nav from "../components/Nav.astro";
   </Hero>
   <article>
   <div class="grid_1-1-1-1-1">
-    <Button text="ABOUT US" />
-    <Button text="FOOD" />
-    <Button text="RULES" />
-    <Button text="TRANSPORT" />
-    <Button text="LOCATION" />
+    <LinkButton href="#header_about_us" text="ABOUT US" />
+    <LinkButton href="#header_food_us"  text="FOOD" />
+    <LinkButton href="#header_rules_us" text="RULES" />
+    <LinkButton href="#header_transport_us" text="TRANSPORT" />
+    <LinkButton href="#header_loca_us" text="LOCATION" />
   </div>
   </article>
   <article>
-    <section class="grid_1-1 order1">
+    <section class="grid_1-1 order1" id="header_about_us">
       <div>
         <h3>ABOUT US</h3>
         <p>
@@ -44,7 +45,7 @@ The Otherness element recognizes this diversity and encourages us to acknowledge
       </div>
       <img src="about4.webp" alt="people talking" />
     </section>
-    <section class="grid_1-1 order2">
+    <section class="grid_1-1 order2" id="header_food_us">
       <img src="about1.webp" alt="People painting" />
       <div>
         <h3>FOOD</h3>
@@ -59,7 +60,7 @@ From 02:00 - 09:00 a small selection of snacks and fruits will be available for 
         </p>
       </div>
     </section>
-    <section class="grid_1-1 order1">
+    <section class="grid_1-1 order1" id="header_rules_us">
       <div>
         <h3>RULES</h3>
         <p>
@@ -72,7 +73,7 @@ Fire is not allowed on the camping site, under no circumstance, with the excepti
       </div>
       <img src="about2.webp" alt="Art that hings" />
     </section>
-      <section class="grid_1-1 order2">
+      <section class="grid_1-1 order2" id="header_transport_us">
         <img src="about6.webp" alt="People hugging and dacing" />
         <div>
           <h3>TRANSPORT</h3>
@@ -83,7 +84,7 @@ See you all soon! Don’t hesitate to contact us with any additional questions f
           </p>
         </div>
       </section>
-      <section class="grid_1-1 order1">
+      <section class="grid_1-1 order1" id="header_loca_us">
         <div>
           <h3>LOCATION</h3>
           <p>
